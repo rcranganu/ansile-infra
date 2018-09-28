@@ -1,0 +1,17 @@
+[balancer]
+104.248.166.239
+
+[webservers]
+104.248.165.84
+167.99.94.172
+
+[database]
+104.248.165.85
+
+[dramble:children]
+balancer
+webservers
+database
+
+[dramble:vars]
+ansible_ssh_user=root
